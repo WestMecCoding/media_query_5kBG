@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 5vw;
+      background-color: red;
+    }
+
+    h2 {
+      color: yellow;
+      font-size: 3vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+      line-height: 1.5em;
+    }
+
+    header#splash-bg {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    #splash-bg::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      height: 100vh;
+      width: 100%;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      filter: hue-rotate(60deg);
+    }
+
+    div.header-content {
+      height: 100vh;
+    }
+
+    blockquote {
+      background-color: rgba(128, 0, 128, 0.2);
+
+      display: inline;
+      position: absolute;
+      bottom: 5%;
+      left: 80%;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      p {
+        /* font-size: 0.8em; */
+      }
+
+      #splash-bg {}
+
+      #splash-bg::before {
+        background-image: url('./purple_br_night_mobile.jpg');
+      }
+    }
+
+    @media (min-width: 769px) {
+      p {
+        /* font-size: 1em; */
+      }
+
+      #splash-bg {}
+
+      #splash-bg::before {
+        background-image: url('./purple_br_night_2K.jpg');
+      }
+    }
+
+    @media (min-width: 1920px) {
+      p {
+        /* font-size: 1.5em; */
+      }
+
+      #splash-bg {}
+
+      #splash-bg::before {
+        background-image: url('./purple_br_night_compress.jpg');
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="splash-bg">
+    <div class="header-content">
+      <h1>Hello World</h1>
+      <h2>This doesn't resize</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sapien eu dapibus scelerisque.
+        Phasellus elit mauris, rhoncus molestie rhoncus sed, dignissim eu metus. In sagittis orci sit amet nulla
+        sodales, id aliquet enim pulvinar. Curabitur venenatis condimentum nunc, at
+        cursus turpis faucibus quis. Aliquam finibus eros quis tortor fringilla pellentesque. Quisque sollicitudin
+        eleifend nulla sit amet rhoncus. Duis sed tortor et massa luctus congue. Nullam vel feugiat eros.
+      </p>
+      <blockquote>Some cool phrase here</blockquote>
+    </div>
+  </header>
+  <main>
+    <p>I'm some more text and stuff</p>
+  </main>
+</body>
+
+</html>
